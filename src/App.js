@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Mynavbar from "./components/Header";
+import Myherosec from "./components/Herosection";
+import MySkills from "./components/Skills";
+import Myfooter from "./components/Footer";
+import Myabout from "./components/About";
+import MyContact from "./components/Contact";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Mynavbar />
+      <div>
+        <Routes>
+          <Route path="/" element={<Myherosec />} />
+          <Route path="/skills" element={<MySkills />} />
+          <Route path="/about" element={<Myabout />} />
+          <Route path="/contact" element={<MyContact />} />
+        </Routes>
+      </div>
+      <Myfooter />
+    </Router>
   );
 }
 

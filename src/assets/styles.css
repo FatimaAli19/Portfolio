@@ -1,0 +1,313 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+body {
+  overflow-x: hidden;
+}
+/* header */
+.hbg {
+  background-color: #237217;
+  height: 90px;
+  margin: 0px;
+}
+/* Remove text decoration and set custom color for all links */
+a {
+  text-decoration: none;
+  color: #080808;
+}
+
+/* Optional: Set color for visited links if needed */
+a:visited {
+  color: #080808;
+}
+
+/* Optional: Set color for active links if needed */
+a:active {
+  color: #080808;
+}
+
+/* Optional: Set color for links when hovered over if needed */
+a:hover {
+  color: lightgreen;
+}
+
+.hcontent {
+  display: flex;
+  font-family: Inknut Antiqua;
+  padding : 20px 200px;
+  font-weight: bolder;
+  justify-content: flex-end;
+  margin: 0px 200px;
+  
+}
+.hlogo {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 120px;
+  border: #237217 double 4px;
+  margin: 15px auto 15px;
+  padding: 0px;
+}
+
+/* Herosec */
+
+.herocontainer {
+  background-color: black;
+  background-size: cover;
+  padding: 0px 50px 50px 50px; 
+  margin: 0px;
+  /* box-sizing: content-box; */
+  height: fit-content;
+}
+/* Define keyframes for the letter-by-letter typing animation */
+@keyframes typeText {
+  from { width: 0; }
+  to { width: 81%; }
+}
+
+/* Apply the typing animation to each individual letter */
+.hrec span {
+  display: inline-block; /* Ensure each letter occupies its own line */
+  overflow: hidden; /* Hide overflow content */
+  white-space: nowrap; /* Prevent line breaks */
+  border-right: 1px solid; /* Create a blinking cursor */
+  animation: typeText 1s steps(20, end) forwards; /* Apply the animation */
+}
+/* Define keyframes for the flying up animation */
+@keyframes flyUp {
+  0% { transform: translateY(200%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Apply the flying up animation to each social icon */
+.social-icons > div {
+  animation: flyUp 1s ease forwards;
+  animation-delay: 0.5s; /* Delay each social icon */
+}
+
+/* Adjust margins to separate the social icons */
+.social-icons > div + div {
+  margin-top: 20px;
+}
+/* Define keyframes for the typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+ 
+.htext {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(20, end) forwards;
+  font-family: Inknut Antiqua;
+  font-size: larger;
+}
+
+.htextbold {
+  position: relative; /* Change to relative positioning */
+  z-index: 1; /* Ensure it appears above other text */
+  opacity: 0;
+  animation: flyOver 1s forwards;
+  font-family: Inknut Antiqua;
+  font-style: italic;
+  font-size: xx-large;
+  color: #237217;
+}
+
+/* Define keyframes for the flying over animation */
+@keyframes flyOver {
+  from { transform: translateY(0) scale(1); opacity: 0; }
+  to { transform: translateY(-20px) scale(1.1); opacity: 1; }
+}
+
+  
+.hrec {
+  border: #237217 solid 5px;
+  border-radius: 10px;
+  width:  max-content;
+  margin: 100px 0 30px;
+  font-size: x-large;  
+  padding: 10px;
+}
+
+.himg {
+  padding: 4px;  
+  height: 40px;
+}
+/* Keyframes for waving animation */
+@keyframes wave {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(0px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply waving animation to the waving image */
+.waving-image {
+  animation: wave 2s ease  infinite;
+}
+
+.profimg {
+  height: 480px;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+}
+
+.profimg img {
+  max-width: 100%; /* Ensure image does not exceed container width */
+  max-height: 100%; /* Ensure image does not exceed container height */
+  object-fit: contain; /* Maintain aspect ratio and fit within container */
+}
+
+/* Skills */
+
+.bg-green {
+  background-color: #237217;
+  padding: 40px ;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+   
+} 
+.bg-black {
+  background-color: black; 
+  border-radius: 10px;
+   
+}
+.textgreen {
+  font-family: Inknut Antiqua;
+  font-size: 80px;
+  color: #237217;
+}
+.greenrec {
+  border: #237217 solid 5px;
+  border-radius: 15px;
+  
+} 
+
+.skills-container {
+  padding: 100px;
+  
+   
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill{
+  margin: 10px;
+  padding: 10px; 
+}
+ 
+/* styles.css */
+
+@keyframes fly-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flying-animation {
+  animation: fly-in 1s ease-out forwards;
+}
+
+
+
+/* Footer */
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* about */
+
+.img-container img {
+  width: 40%; 
+  margin-left: 200px;
+  /* padding: 20px; */
+}
+
+/* contact us */
+
+/* common classes */
+.greenrec {
+  border: #237217 solid 6px;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 60px;
+  text-align: center;
+  color: #237217;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-weight: bolder;
+}
+.centercontainer {
+  display: flex; 
+  justify-content: center;
+}
+ 
+/* contact */
+form{
+    margin-left:  50px; 
+
+}
+form input{
+    border-radius: 10px;
+    border: 2px solid #237217;
+    margin-left:  20px; 
+    padding: 10px;
+    width:300px;
+    background: none;
+    transition: none;
+}
+form textarea{
+    margin: 30px  30px 30px;
+    border-radius: 10px;
+    background: none;
+    border: 2px solid #237217;
+}
+.btncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .btn {
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #237217;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover{
+    background-color: #237217;
+  }
+  
+
+  .txt{
+    font-family: Inknut Antiqua;
+    font-size: larger;
+  }
+  .bgblack {
+    background-color: black; 
+    
+  }

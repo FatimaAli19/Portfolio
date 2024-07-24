@@ -1,7 +1,8 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing:border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 body {
   overflow-x: hidden;
@@ -36,11 +37,10 @@ a:hover {
 .hcontent {
   display: flex;
   font-family: Inknut Antiqua;
-  padding : 20px 200px;
+  padding: 20px 200px;
   font-weight: bolder;
   justify-content: flex-end;
   margin: 0px 200px;
-  
 }
 .hlogo {
   position: absolute;
@@ -59,31 +59,44 @@ a:hover {
 .herocontainer {
   background-color: black;
   background-size: cover;
-  padding: 0px 50px 50px 50px; 
+  padding: 0px 50px 50px 50px;
   margin: 0px;
   /* box-sizing: content-box; */
   height: fit-content;
 }
 /* Define keyframes for the letter-by-letter typing animation */
 @keyframes typeText {
-  from { width: 0; }
-  to { width: 81%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 81%;
+  }
 }
 
 /* Apply the typing animation to each individual letter */
 .hrec span {
   display: inline-block; /* Ensure each letter occupies its own line */
-  overflow: hidden; /* Hide overflow content */
-  white-space: nowrap; /* Prevent line breaks */
-  border-right: 1px solid; /* Create a blinking cursor */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1.5px solid;
+  margin-right: 3 px;
   animation: typeText 1s steps(20, end) forwards; /* Apply the animation */
 }
 /* Define keyframes for the flying up animation */
 @keyframes flyUp {
-  0% { transform: translateY(200%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-
+.herocontainer div svg:hover {
+  fill: rgb(84, 204, 84);
+}
 /* Apply the flying up animation to each social icon */
 .social-icons > div {
   animation: flyUp 1s ease forwards;
@@ -96,10 +109,14 @@ a:hover {
 }
 /* Define keyframes for the typing animation */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
- 
+
 .htext {
   display: inline-block;
   overflow: hidden;
@@ -122,36 +139,51 @@ a:hover {
 
 /* Define keyframes for the flying over animation */
 @keyframes flyOver {
-  from { transform: translateY(0) scale(1); opacity: 0; }
-  to { transform: translateY(-20px) scale(1.1); opacity: 1; }
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
 }
 
-  
 .hrec {
   border: #237217 solid 5px;
   border-radius: 10px;
-  width:  max-content;
+  width: max-content;
   margin: 100px 0 30px;
-  font-size: x-large;  
+  font-size: x-large;
   padding: 10px;
 }
 
 .himg {
-  padding: 4px;  
+  padding: 4px;
   height: 40px;
 }
 /* Keyframes for waving animation */
 @keyframes wave {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(5px); }
-  50% { transform: translateX(0px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Apply waving animation to the waving image */
 .waving-image {
-  animation: wave 2s ease  infinite;
+  animation: wave 2s ease infinite;
 }
 
 .profimg {
@@ -170,45 +202,69 @@ a:hover {
 /* Skills */
 
 .bg-green {
+  display: flex;
+  justify-content: center;
   background-color: #237217;
-  padding: 40px ;
+  padding: 20px;
+  flex-wrap: wrap;
+  border-radius: 18px;
+  opacity: 0.9;
+  animation: grow-shake-shrink 6s infinite;
+}
+@keyframes grow-shake-shrink {
+  0% {
+    transform: scale(1.1);
+  }
+  30% {
+    transform: scale(1);
+  }
+  40%,
+  60% {
+    transform: scale(1) rotate(5deg);
+  }
+  50%,
+  70% {
+    transform: scale(1) rotate(-5deg);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
 .logo {
   height: 40px;
   margin-right: 10px;
-   
-} 
-.bg-black {
-  background-color: black; 
-  border-radius: 10px;
-   
 }
+/* .bg-black {
+  background-color: transparent; 
+  border-radius: 10px;
+  width: 10rem;
+  opacity: .8;
+   
+} */
 .textgreen {
-  font-family: Inknut Antiqua;
   font-size: 80px;
   color: #237217;
 }
-.greenrec {
+/* .greenrec {
   border: #237217 solid 5px;
   border-radius: 15px;
-  
-} 
+}  */
 
 .skills-container {
   padding: 100px;
-  
-   
 }
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.skill{
+.skill {
   margin: 10px;
-  padding: 10px; 
+  padding: 10px;
+  background-color: #080808;
+  border-radius: 10px;
+  width: 10rem;
+  opacity: 0.9;
 }
- 
+
 /* styles.css */
 
 @keyframes fly-in {
@@ -226,8 +282,6 @@ a:hover {
   animation: fly-in 1s ease-out forwards;
 }
 
-
-
 /* Footer */
 .text-center {
   display: flex;
@@ -238,13 +292,19 @@ a:hover {
 /* about */
 
 .img-container img {
-  width: 40%; 
+  width: 40%;
   margin-left: 200px;
   /* padding: 20px; */
 }
 
 /* contact us */
-
+.contact {
+  height: 30rem;
+}
+ 
+.contact a{
+  margin: 0 20px;
+}
 /* common classes */
 .greenrec {
   border: #237217 solid 6px;
@@ -258,56 +318,98 @@ a:hover {
   font-weight: bolder;
 }
 .centercontainer {
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
- 
+
 /* contact */
-form{
-    margin-left:  50px; 
 
+form input,
+textarea {
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  background: rgb(30, 29, 29);
+  transition: none;
 }
-form input{
-    border-radius: 10px;
-    border: 2px solid #237217;
-    margin-left:  20px; 
-    padding: 10px;
-    width:300px;
-    background: none;
-    transition: none;
-}
-form textarea{
-    margin: 30px  30px 30px;
-    border-radius: 10px;
-    background: none;
-    border: 2px solid #237217;
-}
-.btncontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-  
-  .btn {
-    background: none;
-    cursor: pointer;
-    border-radius: 10px;
-    margin: 20px;
-    padding: 10px;
-    width: 200px;
-    border: 2px solid #237217;
-    transition: background-color 0.3s ease;
-  }
-  .btn:hover{
-    background-color: #237217;
-  }
-  
 
-  .txt{
-    font-family: Inknut Antiqua;
-    font-size: larger;
-  }
-  .bgblack {
-    background-color: black; 
-    
-  }
+.btn {
+  border-radius: 10px;
+  border: 2px solid green;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background: transparent;
+  transition: none;
+}
+.btn:hover {
+  background-color: #4cd637;
+}
+
+.txt {
+  font-family: Inknut Antiqua;
+  font-size: larger;
+}
+.bgblack {
+  background-color: black;
+}
+
+.cardStyle {
+  width: 350px;
+  height: fit-content;
+  color: white;
+  text-align: center;
+
+  margin: 25px;
+  /* padding: 10px; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+.projectDetail {
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7));
+  background-blend-mode: overlay;
+  height: 100%;
+  z-index: 2;
+  border-radius: 15px;
+  opacity: 0;
+}
+.projectDetail span {
+  /* color: #237217; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* adjust the number of lines */
+  -webkit-box-orient: vertical;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow svg {
+  opacity: 0;
+  z-index: 1000;
+  margin-top: 80px;
+  text-decoration: none;
+}
+.cardStyle:hover svg {
+  opacity: 1;
+}
+.cardStyle:hover {
+  background-color: #000000;
+  opacity: 0.9;
+  border: #237217 3px solid;
+}
+
+.cardStyle:hover .projectDetail {
+  opacity: 1;
+  transform: scale(1.1);
+}

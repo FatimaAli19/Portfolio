@@ -12,64 +12,64 @@ import "../assets/styles.css";
 function MySkills() {
   return (
     <div className="skills-container  bgblack ">
-      <div className="center">
+      <div className="centercontainer">
         <div className="greenrec">
           <h1>Skills</h1>
         </div>
       </div>
       <div className="bg-green">
-        <div className="row">
-          <div className="bg-black text-white col-lg-2 skill">
+        
+          <div className="  text-white   skill">
             <span>
               <img src={Reactlogo} alt="ReactLogo" className="logo" />
             </span>
             <span>React</span>
           </div>
-          <div  className="bg-black text-white col-lg-2 skill">
+          <div  className="  text-white  skill">
             <span>
               <img src={js} alt="ReactLogo" className="logo" />
             </span>
             <span>JavaSript</span>
           </div>
-          <div  className="bg-black text-white col-lg-2 skill">
+          <div  className="  text-white   skill">
             <span>
               <img src={angular} alt="ReactLogo" className="logo" />
             </span>
             <span>Angular</span>
           </div>
-          <div  className="bg-black text-white col-lg-2 skill">
+          <div  className="  text-white  skill">
             <span>
               <img src={nodejs} alt="ReactLogo" className="logo" />
             </span>
             <span>Nodejs</span>
           </div>
-        </div>
-        <div className="row">
-          <div   className="bg-black text-white col-lg-2 skill">
+         
+        
+          <div   className="  text-white   skill">
             <span>
               <img src={figma} alt="ReactLogo" className="logo" />
             </span>
             <span>figma</span>
           </div>
-          <div  className="bg-black text-white col-lg-2 skill">
+          <div  className="  text-white   skill">
             <span>
               <img src={mongodb} alt="ReactLogo" className="logo" />
             </span>
             <span>Mongodb</span>
           </div>
-          <div  className="bg-black text-white col-lg-2 skill">
+          <div  className="  text-white   skill">
             <span>
               <img src={MySQl} alt="ReactLogo" className="logo" />
             </span>
             <span>MySQL</span>
           </div>
-          <div className="bg-black text-white col-lg-2 skill">
+          <div className="  text-white  skill">
             <span>
               <img src={python} alt="ReactLogo" className="logo" />
             </span>
             <span>Python</span>
           </div>
-        </div>
+         
       </div>
     </div>
   );

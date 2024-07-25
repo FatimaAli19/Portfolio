@@ -6,22 +6,32 @@ import MySkills from "./components/Skills";
 import Myfooter from "./components/Footer";
 import Myabout from "./components/About";
 import MyContact from "./components/Contact";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Element } from "react-scroll";
+import MyProjects from "./components/Projects";
 
 function App() {
   return (
-    <Router>
+    <>
       <Mynavbar />
       <div>
-        <Routes>
-          <Route path="/" element={<Myherosec />} />
-          <Route path="/skills" element={<MySkills />} />
-          <Route path="/about" element={<Myabout />} />
-          <Route path="/contact" element={<MyContact />} />
-        </Routes>
+        <Element name="/">
+          <Myherosec />
+        </Element>
+        <Element name="/about">
+          <Myabout />
+        </Element>
+        <Element name="/skills">
+          <MySkills />
+        </Element>{" "}
+        <Element name="/projects">
+          <MyProjects />
+        </Element>{" "}
+        <Element name="/contact">
+          <MyContact />
+        </Element>
       </div>
       <Myfooter />
-    </Router>
+    </>
   );
 }
 

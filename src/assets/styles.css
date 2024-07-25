@@ -10,58 +10,103 @@ body {
 /* header */
 .hbg {
   background-color: #237217;
-  height: 90px;
-  margin: 0px;
-}
-/* Remove text decoration and set custom color for all links */
-a {
-  text-decoration: none;
-  color: #080808;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000000;
+  padding: 5px 20px;
 }
 
-/* Optional: Set color for visited links if needed */
-a:visited {
-  color: #080808;
-}
-
-/* Optional: Set color for active links if needed */
-a:active {
-  color: #080808;
-}
-
-/* Optional: Set color for links when hovered over if needed */
-a:hover {
-  color: lightgreen;
+.navbar {
+  --bs-navbar-color: #ffffff;
 }
 
 .hcontent {
   display: flex;
-  font-family: Inknut Antiqua;
   padding: 20px 200px;
   font-weight: bolder;
   justify-content: flex-end;
   margin: 0px 200px;
 }
-.hlogo {
-  position: absolute;
-  top: 90%;
-  left: 10%;
-  transform: translate(-50%, -50%);
-  height: 100px;
-  width: 120px;
-  border: #237217 double 4px;
-  margin: 15px auto 15px;
-  padding: 0px;
+
+@media (max-width: 1200px) {
+  .hcontent {
+    padding: 20px 100px;
+    margin: 0 100px;
+  }
 }
+
+@media (max-width: 992px) {
+  .hcontent {
+    padding: 20px 50px;
+    margin: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hcontent {
+    padding: 20px 20px;
+    margin: 0 20px;
+  }
+
+  .navbar-collapse {
+    background-color: #237217;
+  }
+
+  .navbar-toggler {
+    border-color: #fff;
+  }
+
+  .navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    color: #fff;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .nav-link {
+    color: #fff !important;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hcontent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 353px) {
+  .hcontent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    margin-bottom: 10px;
+  }
+}
+
+
 
 /* Herosec */
 
 .herocontainer {
   background-color: black;
   background-size: cover;
-  padding: 0px 50px 50px 50px;
-  margin: 0px;
-  /* box-sizing: content-box; */
+  padding: 100px 50px 50px 50px;
+  margin: 0px 0; 
   height: fit-content;
 }
 /* Define keyframes for the letter-by-letter typing animation */
@@ -237,22 +282,11 @@ a:hover {
   height: 40px;
   margin-right: 10px;
 }
-/* .bg-black {
-  background-color: transparent; 
-  border-radius: 10px;
-  width: 10rem;
-  opacity: .8;
-   
-} */
+ 
 .textgreen {
   font-size: 80px;
   color: #237217;
 }
-/* .greenrec {
-  border: #237217 solid 5px;
-  border-radius: 15px;
-}  */
-
 .skills-container {
   padding: 100px;
 }
@@ -283,14 +317,19 @@ a:hover {
 }
 
 /* Footer */
-.text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
+
+.footer{ 
+  position: relative;
+  bottom: 0;
+  color: white;
+  font-size: larger;
+  text-align: center;
+  padding: 20px;
+  background-color: #237217;
+  
 }
-
 /* about */
-
 .img-container img {
   width: 40%;
   margin-left: 200px;
@@ -299,7 +338,7 @@ a:hover {
 
 /* contact us */
 .contact {
-  height: 30rem;
+  padding: 100px 50px 100px 0px;
 }
  
 .contact a{
@@ -355,6 +394,7 @@ textarea {
 }
 .bgblack {
   background-color: black;
+  width:100%;
 }
 
 .cardStyle {

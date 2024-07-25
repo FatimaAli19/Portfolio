@@ -5,37 +5,37 @@ import "../assets/styles.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import image1 from "../assets/Images/Modern Royal Technology Logo.png";
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 function Mynavbar() {
   return (
     <div className="hbg">
-      <Navbar expand="lg"  >
+      <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#home"><div className="row col-lg-4 col-sm-6">
-          <img src={image1} alt="logo" className="hlogo"></img>
-        </div></Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <h1 className='text-white'>Portfolio</h1>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="hcontent">
             <Nav.Link className="me-5">
-              <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>
+              <Link to="/" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Home</Link>
             </Nav.Link>
             
             <Nav.Link  className="me-5">
-            <Link to="/skills" style={{ textDecoration: 'none' }}>Skills</Link>
+            <Link to="/skills" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Skills</Link>
             </Nav.Link>
 
             <Nav.Link className="me-5">
-              <Link to="/about" style={{ textDecoration: 'none' }}>About</Link>
+              <Link to="/about" style={{ textDecoration: 'none' }} smooth={true} duration={500}>About</Link>
             </Nav.Link>
 
             <Nav.Link   className="me-5">
-            <Link to="/projects" style={{ textDecoration: 'none' }}>Projects</Link>
+            <Link to="/projects" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Projects</Link>
 
             </Nav.Link>
 
             <Nav.Link   className="me-5">
-            <Link to="/contact" style={{ textDecoration: 'none' }}>Contact</Link>
+            <Link to="/contact" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Contact</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

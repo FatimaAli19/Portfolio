@@ -8,107 +8,15 @@ body {
   overflow-x: hidden;
 }
 /* header */
-.hbg {
-  background-color: #237217;
-  width: 100%;
-  position: fixed;
-  top: 0;
-   
-  z-index: 1000000;
-  padding: 5px 10px;
-   
-}
-.Resumebtn{
-  background: none;
-  white-space: nowrap;
-  font-weight: bolder;
-  border: 2px solid #0b4d05;
-  border-radius: 10px;
+ 
+.resumeBtn {
+  border: 2px solid #171817;
+  border-radius: 100px;
   padding: 5px;
-   
-
 }
-.navbar {
-  --bs-navbar-color: #ffffff;
+.resumeBtn:hover{
+  background-color: #000000;
 }
-
-.hcontent {
-  display: flex;
-  padding: 20px 100px;
-  font-weight: bolder;
-  margin: 0px 100px;
-}
-
-@media (max-width: 1200px) {
-  .hcontent {
-    padding: 20px 50px;
-    margin: 0 10px;
-  }
-}
-
-@media (max-width: 992px) {
-  .hcontent {
-    padding: 20px 50px;
-    margin: 0 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hcontent {
-    padding: 20px 20px;
-    margin: 0 20px;
-  }
-
-  .navbar-collapse {
-    background-color: #237217;
-  }
-
-  .navbar-toggler {
-    border-color: #fff;
-  }
-
-  .navbar-toggler:focus, .navbar-toggler:active {
-    outline: none;
-    box-shadow: none;
-  }
-
-  .navbar-toggler-icon {
-    color: #fff;
-  }
-
-  .navbar-collapse {
-    width: 100%;
-  }
-
-  .nav-link {
-    color: #fff !important;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .hcontent {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-link {
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 353px) {
-  .hcontent {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-link {
-    margin-bottom: 10px;
-  }
-}
-
-
 
 /* Herosec */
 
@@ -116,7 +24,7 @@ body {
   background-color: black;
   background-size: cover;
   padding: 100px 50px 50px 50px;
-  margin: 0px 0; 
+  margin: 0px 0;
   height: fit-content;
 }
 /* Define keyframes for the letter-by-letter typing animation */
@@ -152,10 +60,10 @@ body {
 .herocontainer div svg:hover {
   fill: rgb(84, 204, 84);
 }
- 
+
 .social-icons > div {
   animation: flyUp 1s ease forwards;
-  animation-delay: 0.5s;  
+  animation-delay: 0.5s;
 }
 
 /* Adjust margins to separate the social icons */
@@ -292,7 +200,7 @@ body {
   height: 40px;
   margin-right: 10px;
 }
- 
+
 .textgreen {
   font-size: 80px;
   color: #237217;
@@ -327,9 +235,8 @@ body {
 }
 
 /* Footer */
- 
 
-.footer{ 
+.footer {
   position: relative;
   bottom: 0;
   color: white;
@@ -337,7 +244,6 @@ body {
   text-align: center;
   padding: 20px;
   background-color: #237217;
-  
 }
 /* about */
 .img-container img {
@@ -350,8 +256,8 @@ body {
 .contact {
   padding: 100px 50px 100px 0px;
 }
- 
-.contact a{
+
+.contact a {
   margin: 0 20px;
 }
 /* common classes */
@@ -391,9 +297,10 @@ textarea {
   border: 2px solid green;
   width: 100%;
   margin: 10px;
+  color: #ffffff;
   padding: 10px;
   background: transparent;
-  transition: none;
+  text-decoration: none;
 }
 .btn:hover {
   background-color: #4cd637;
@@ -405,7 +312,7 @@ textarea {
 }
 .bgblack {
   background-color: black;
-  width:100%;
+  width: 100%;
 }
 
 .cardStyle {

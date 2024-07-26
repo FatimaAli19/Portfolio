@@ -1,53 +1,110 @@
-// Mynavbar.js
-import Container from 'react-bootstrap/Container';
+import { Link } from "react-scroll";
 import React from "react";
-import "../assets/styles.css";
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar"; 
-import { Link } from 'react-scroll';
-function Mynavbar() {
+import Navbar from "react-bootstrap/Navbar";
+import Button from "react-bootstrap/Button";
+import "../assets/styles.css";
+function MyNavbar() {
+  const resumeURL =
+    "https://drive.google.com/file/d/1wtigaavAhHz6ZqJqTmsJMONX5PBlzgQW/view?usp=sharing";
   return (
-    <div className="hbg">
-      <Navbar expand="lg">
+    <Navbar
+      variant="dark"
+      expand="lg"
+      fixed="top"
+      style={{ backgroundColor: "#237217" }}
+    >
       <Container>
-        <Navbar.Brand href="#home">
-          <h1 className='text-white'>Portfolio</h1>
+        <Navbar.Brand className="text-white">
+          <Link
+            to="/"
+            style={{ textDecoration: "none", fontSize: "2em" }}
+            smooth={true}
+            duration={500}
+          >
+            Portfolio
+          </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="hcontent">
-            <Nav.Link className="me-5">
-              <Link to="/" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Home</Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto d-flex align-items-center">
+            <Nav.Link className="text-white">
+              <Link
+                to="/"
+                style={{ textDecoration: "none" }}
+                smooth={true}
+                duration={500}
+              >
+                Home
+              </Link>
             </Nav.Link>
-            
-            <Nav.Link  className="me-5">
-            <Link to="/skills" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Skills</Link>
+            <Nav.Link className="text-white">
+              <Link
+                to="/skills"
+                style={{ textDecoration: "none" }}
+                smooth={true}
+                duration={500}
+              >
+                Skills
+              </Link>
             </Nav.Link>
-
-            <Nav.Link className="me-5">
-              <Link to="/about" style={{ textDecoration: 'none' }} smooth={true} duration={500}>About</Link>
+            <Nav.Link className="text-white">
+              <Link
+                to="/about"
+                style={{ textDecoration: "none" }}
+                smooth={true}
+                duration={500}
+              >
+                About
+              </Link>
             </Nav.Link>
-
-            <Nav.Link   className="me-5">
-            <Link to="/projects" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Projects</Link>
-
+            <Nav.Link className="text-white">
+              <Link
+                to="/projects"
+                style={{ textDecoration: "none" }}
+                smooth={true}
+                duration={500}
+              >
+                Projects
+              </Link>
             </Nav.Link>
-
-            <Nav.Link   className="me-5">
-            <Link to="/contact" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Contact</Link>
+            <Nav.Link className="text-white">
+              <Link
+                to="/contact"
+                style={{ textDecoration: "none" }}
+                smooth={true}
+                duration={500}
+              >
+                Contact
+              </Link>
             </Nav.Link>
-            <Nav.Link   className="me-5">
-              <button className='Resumebtn text-white'>
-
-             Download Resume
-              </button>
-            </Nav.Link>
+            <Button
+              class="btn"
+              variant="outline-success"
+              href={resumeURL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="white"
+                class="bi bi-download"
+                viewBox="0 0 16 16"
+                className="mx-1 mb-2"
+              >
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+              </svg>
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </div>
   );
 }
 
-export default Mynavbar;
+export default MyNavbar;

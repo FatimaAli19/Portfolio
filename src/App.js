@@ -1,4 +1,4 @@
-import "./App.css";
+ import ReactScroll from 'react-scroll';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Mynavbar from "./components/Header";
 import Myherosec from "./components/Herosection";
@@ -23,8 +23,8 @@ function App() {
         <Element name="/about">
           <Myabout />
         </Element>
-        <Element name="/project">
-          <MyProjects />
+        <Element name="/projects">
+          <MyProjects/>
         </Element>
         <Element name="/contact">
           <MyContact />

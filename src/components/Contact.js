@@ -97,6 +97,7 @@ function MyContact() {
                 placeholder="Leave a message here"
                 cols="2"
                 rows="5"
+                 
               ></textarea>
 
               <button className="btn text-white">Shoot</button>

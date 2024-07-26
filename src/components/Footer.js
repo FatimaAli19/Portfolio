@@ -1,7 +1,7 @@
 import '../assets/styles.css';
 function Myfooter(){
 return(
-    <div className="hbg container-fluid  htext text-white  text-center"> 
+    <div className="footer text-center"> 
           <span>&copy;All rights are reserved.</span> 
     </div>
 );

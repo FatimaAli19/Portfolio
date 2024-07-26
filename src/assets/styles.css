@@ -13,26 +13,36 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
+   
   z-index: 1000000;
-  padding: 5px 20px;
+  padding: 5px 10px;
+   
 }
+.Resumebtn{
+  background: none;
+  white-space: nowrap;
+  font-weight: bolder;
+  border: 2px solid #0b4d05;
+  border-radius: 10px;
+  padding: 5px;
+   
 
+}
 .navbar {
   --bs-navbar-color: #ffffff;
 }
 
 .hcontent {
   display: flex;
-  padding: 20px 200px;
+  padding: 20px 100px;
   font-weight: bolder;
-  justify-content: flex-end;
-  margin: 0px 200px;
+  margin: 0px 100px;
 }
 
 @media (max-width: 1200px) {
   .hcontent {
-    padding: 20px 100px;
-    margin: 0 100px;
+    padding: 20px 50px;
+    margin: 0 10px;
   }
 }
 
@@ -142,10 +152,10 @@ body {
 .herocontainer div svg:hover {
   fill: rgb(84, 204, 84);
 }
-/* Apply the flying up animation to each social icon */
+ 
 .social-icons > div {
   animation: flyUp 1s ease forwards;
-  animation-delay: 0.5s; /* Delay each social icon */
+  animation-delay: 0.5s;  
 }
 
 /* Adjust margins to separate the social icons */
@@ -373,6 +383,7 @@ textarea {
   display: flex;
   background: rgb(30, 29, 29);
   transition: none;
+  color: #ffffff;
 }
 
 .btn {

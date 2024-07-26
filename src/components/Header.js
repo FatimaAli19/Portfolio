@@ -3,8 +3,7 @@ import Container from 'react-bootstrap/Container';
 import React from "react";
 import "../assets/styles.css";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import image1 from "../assets/Images/Modern Royal Technology Logo.png";
+import Navbar from "react-bootstrap/Navbar"; 
 import { Link } from 'react-scroll';
 function Mynavbar() {
   return (
@@ -36,6 +35,12 @@ function Mynavbar() {
 
             <Nav.Link   className="me-5">
             <Link to="/contact" style={{ textDecoration: 'none' }} smooth={true} duration={500}>Contact</Link>
+            </Nav.Link>
+            <Nav.Link   className="me-5">
+              <button className='Resumebtn text-white'>
+
+             Download Resume
+              </button>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

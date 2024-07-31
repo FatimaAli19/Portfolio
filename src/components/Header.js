@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import "../assets/styles.css";
+
 function MyNavbar() {
   const resumeURL =
     "https://drive.google.com/file/d/1wtigaavAhHz6ZqJqTmsJMONX5PBlzgQW/view?usp=sharing";
@@ -29,7 +30,7 @@ function MyNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto d-flex align-items-center">
-            <Nav.Link className="text-white">
+            <Nav.Link className="nav-link-custom text-white">
               <Link
                 to="/"
                 style={{ textDecoration: "none" }}
@@ -39,7 +40,7 @@ function MyNavbar() {
                 Home
               </Link>
             </Nav.Link>
-            <Nav.Link className="text-white">
+            <Nav.Link className="nav-link-custom text-white">
               <Link
                 to="/skills"
                 style={{ textDecoration: "none" }}
@@ -49,7 +50,7 @@ function MyNavbar() {
                 Skills
               </Link>
             </Nav.Link>
-            <Nav.Link className="text-white">
+            <Nav.Link className="nav-link-custom text-white">
               <Link
                 to="/about"
                 style={{ textDecoration: "none" }}
@@ -59,7 +60,7 @@ function MyNavbar() {
                 About
               </Link>
             </Nav.Link>
-            <Nav.Link className="text-white">
+            <Nav.Link className="nav-link-custom text-white">
               <Link
                 to="/projects"
                 style={{ textDecoration: "none" }}
@@ -69,7 +70,7 @@ function MyNavbar() {
                 Projects
               </Link>
             </Nav.Link>
-            <Nav.Link className="text-white">
+            <Nav.Link className="nav-link-custom text-white">
               <Link
                 to="/contact"
                 style={{ textDecoration: "none" }}
@@ -81,7 +82,7 @@ function MyNavbar() {
             </Nav.Link>
             <Button
               class="btn"
-              variant="outline-success"
+              variant="#00ff00"
               href={resumeURL}
               target="_blank"
               rel="noopener noreferrer"

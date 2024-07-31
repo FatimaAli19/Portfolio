@@ -11,15 +11,17 @@ import "../assets/styles.css";
 
 function MySkills() {
   return (
-    <div className="skills-container  bgblack ">
-      <div className="centercontainer">
-        <div className="greenrec">
-          <h1>Skills</h1>
+    <div className="bgblack">
+      <div className="row d-flex justify-content-center " style={{padding:'100px 50px 40px 0'}}>
+        <div className="col-lg-6 col-sm-12 col-md-12">
+          <div className="text-center text-white heading">
+            <span style={{ fontSize: "80px", marginRight: "19px" }}>My</span>
+            <span className="textgreen">Skills</span>
+          </div>
         </div>
       </div>
-      <div className="bg-green">
-        
-          <div className="  text-white   skill">
+      <div className="bg-green" style={{margin:'40px 70px 0'}}>
+          <div className="text-white skill">
             <span>
               <img src={Reactlogo} alt="ReactLogo" className="logo" />
             </span>

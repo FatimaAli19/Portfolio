@@ -7,8 +7,7 @@ import MySkills from "./components/Skills";
 import Myfooter from "./components/Footer";
 import Myabout from "./components/About";
 import MyContact from "./components/Contact";
-import MyProjects from "./components/Projects"; 
-import MyprojectPage from "./components/projectPage";
+import MyProjects from "./components/Projects";  
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -21,8 +20,7 @@ function App() {
         <Route path="/skills" element={<MySkills />} />
         <Route path="/about" element={<Myabout />} />
         <Route path="/projects" element={<MyProjects />} />
-        <Route path="/contact" element={<MyContact />} />
-        <Route path="/projectPage" element={<MyprojectPage />} /> / 
+        <Route path="/contact" element={<MyContact />} /> 
       </Routes>
       <Myfooter />
     </Router>

@@ -31,7 +31,7 @@ const Myabout = () => {
       <div className="row" style={{ padding: "100px 50px 40px 0" }}>
         <div className="col-lg-6 col-sm-12 col-md-12">
           <div className="text-center heading">
-            <span style={{ fontSize: "80px", marginRight: "19px" }}>
+            <span style={{ fontSize: "70px", marginRight: "19px" }}>
               About{" "}
             </span>
             <span className="textgreen">Me</span>

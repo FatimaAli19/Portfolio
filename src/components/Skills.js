@@ -11,35 +11,35 @@ import "../assets/styles.css";
 
 function MySkills() {
   return (
-    <div className="bgblack">
-      <div className="row d-flex justify-content-center " style={{padding:'100px 50px 40px 0'}}>
+    <div className="bgblack" style={{padding:'100px 50px 100px 50px'}}>
+      <div className="row d-flex justify-content-center "  >
         <div className="col-lg-6 col-sm-12 col-md-12">
           <div className="text-center text-white heading">
-            <span style={{ fontSize: "80px", marginRight: "19px" }}>My</span>
+            <span style={{ fontSize: "70px", marginRight: "19px" }}>My</span>
             <span className="textgreen">Skills</span>
           </div>
         </div>
       </div>
       <div className="bg-green" style={{margin:'40px 70px 0'}}>
-          <div className="text-white skill">
+          <div className="text-white skill " data-aos="zoom-out-down">
             <span>
               <img src={Reactlogo} alt="ReactLogo" className="logo" />
             </span>
             <span>React</span>
           </div>
-          <div  className="  text-white  skill">
+          <div  className="  text-white  skill " data-aos="zoom-out-down">
             <span>
               <img src={js} alt="ReactLogo" className="logo" />
             </span>
             <span>JavaSript</span>
           </div>
-          <div  className="  text-white   skill">
+          <div  className="  text-white   skill" data-aos="zoom-out-down">
             <span>
               <img src={angular} alt="ReactLogo" className="logo" />
             </span>
             <span>Angular</span>
           </div>
-          <div  className="  text-white  skill">
+          <div  className="  text-white  skill" data-aos="zoom-out-down">
             <span>
               <img src={nodejs} alt="ReactLogo" className="logo" />
             </span>
@@ -47,25 +47,25 @@ function MySkills() {
           </div>
          
         
-          <div   className="  text-white   skill">
+          <div   className="  text-white   skill" data-aos="zoom-out-down">
             <span>
               <img src={figma} alt="ReactLogo" className="logo" />
             </span>
             <span>figma</span>
           </div>
-          <div  className="  text-white   skill">
+          <div  className="  text-white   skill" data-aos="zoom-out-down">
             <span>
               <img src={mongodb} alt="ReactLogo" className="logo" />
             </span>
             <span>Mongodb</span>
           </div>
-          <div  className="  text-white   skill">
+          <div  className="  text-white   skill" data-aos="zoom-out-down">
             <span>
               <img src={MySQl} alt="ReactLogo" className="logo" />
             </span>
             <span>MySQL</span>
           </div>
-          <div className="  text-white  skill">
+          <div className="  text-white  skill" data-aos="zoom-out-down">
             <span>
               <img src={python} alt="ReactLogo" className="logo" />
             </span>

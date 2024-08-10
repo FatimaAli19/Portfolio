@@ -1,4 +1,5 @@
- import ReactScroll from 'react-scroll';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Mynavbar from "./components/Header";
 import Myherosec from "./components/Herosection";
@@ -6,32 +7,33 @@ import MySkills from "./components/Skills";
 import Myfooter from "./components/Footer";
 import Myabout from "./components/About";
 import MyContact from "./components/Contact";
-import { Element } from "react-scroll";
-import MyProjects from "./components/Projects";
+import MyProjects from "./components/Projects"; 
+import MyprojectPage from "./components/projectPage";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 function App() {
   return (
-    <>
+    <Router>
       <Mynavbar />
-
-      <div>
-        <Element name="/">
-          <Myherosec />
-        </Element>
-        <Element name="/skills">
-          <MySkills />
-        </Element>
-        <Element name="/about">
-          <Myabout />
-        </Element>
-        <Element name="/projects">
-          <MyProjects/>
-        </Element>
-        <Element name="/contact">
-          <MyContact />
-        </Element>
-      </div>
+      <Routes>
+        <Route path="/" element={<Myherosec />} />
+        <Route path="/skills" element={<MySkills />} />
+        <Route path="/about" element={<Myabout />} />
+        <Route path="/projects" element={<MyProjects />} />
+        <Route path="/contact" element={<MyContact />} />
+        <Route path="/projectPage" element={<MyprojectPage />} /> / 
+      </Routes>
       <Myfooter />
-    </>
+    </Router>
+    // <>
+    //  <Mynavbar />
+    //  <Myherosec />
+    //  <MySkills />
+    //  <Myabout />
+    //  <MyProjects />
+    //  <MyContact />
+    // </>
   );
 }
 

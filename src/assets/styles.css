@@ -4,11 +4,21 @@
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
+html,
 body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
- 
-.nav-link::before{
+.bgblack {
+  background-color: black;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Navbar */
+.nav-link::before {
   content: "";
   position: absolute;
   width: 0;
@@ -28,7 +38,7 @@ body {
 }
 
 .nav-link-custom a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 2px;
@@ -51,21 +61,19 @@ body {
   text-shadow: 0 0 8px #00ff00;
 }
 
-
 /* Herosec */
 
 .herocontainer {
   padding: 60px 50px 50px;
   height: fit-content;
 }
-/* Define keyframes for the letter-by-letter typing animation */
-@keyframes typeText {
-  from {
-    width: 0;
-  }
-  to {
-    width: 81%;
-  }
+.hrec {
+  border: #237217 solid 5px;
+  border-radius: 10px;
+  width: max-content;
+  margin: 100px 10px 30px 0px;
+  font-size: x-large;
+  padding: 10px;
 }
 .hrec span {
   display: inline-block;
@@ -75,11 +83,20 @@ body {
   margin-right: 3 px;
   animation: typeText 1s steps(20, end) forwards;
 }
-.heading{
+/*  keyframes for the letter-by-letter typing animation */
+@keyframes typeText {
+  from {
+    width: 0;
+  }
+  to {
+    width: 81%;
+  }
+}
+.heading {
   animation: flyUp 1s ease forwards;
   animation-delay: 0s;
 }
-/* Define keyframes for the flying up animation */
+/*  keyframes for the flying up animation */
 @keyframes flyUp {
   0% {
     transform: translateY(200%);
@@ -102,8 +119,7 @@ body {
   animation: flyUp 1s ease forwards;
   animation-delay: 0s;
 }
-
-/* Define keyframes for the typing animation */
+/* keyframes for the typing animation */
 @keyframes typing {
   from {
     width: 0;
@@ -116,15 +132,14 @@ body {
 .htext {
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap;
   animation: typing 1s steps(20, end) forwards;
   font-family: Inknut Antiqua;
-  font-size: larger;
+  font-size: 2vw;
 }
 
 .htextbold {
-  position: relative; /* Change to relative positioning */
-  z-index: 1; /* Ensure it appears above other text */
+  position: relative;
+  z-index: 1;
   opacity: 0;
   animation: flyOver 1s forwards;
   font-family: Inknut Antiqua;
@@ -133,7 +148,7 @@ body {
   color: #237217;
 }
 
-/* Define keyframes for the flying over animation */
+/*  keyframes for the flying over animation */
 @keyframes flyOver {
   from {
     transform: translateY(0) scale(1);
@@ -143,15 +158,6 @@ body {
     transform: translateY(-20px) scale(1.1);
     opacity: 1;
   }
-}
-
-.hrec {
-  border: #237217 solid 5px;
-  border-radius: 10px;
-  width: max-content;
-  margin: 100px 0 30px;
-  font-size: x-large;
-  padding: 10px;
 }
 
 .himg {
@@ -176,21 +182,19 @@ body {
     transform: translateX(0);
   }
 }
-
 /* Apply waving animation to the waving image */
 .waving-image {
   animation: wave 2s ease infinite;
 }
-
 .profimg {
   height: 480px;
   display: flex;
   justify-content: flex-end;
   max-width: 100%;
+  padding: 0;
 }
-
 .profimg img {
-  max-width: 100%; /* Ensure image does not exceed container width */
+  max-width: 100%;
   max-height: 100%; /* Ensure image does not exceed container height */
   object-fit: contain; /* Maintain aspect ratio and fit within container */
 }
@@ -235,7 +239,7 @@ body {
 }
 
 .textgreen {
-  font-size: 80px;
+  font-size: 70px;
   color: #237217;
 }
 
@@ -247,8 +251,6 @@ body {
   width: 10rem;
   opacity: 0.9;
 }
-
-/* styles.css */
 
 @keyframes fly-in {
   0% {
@@ -276,7 +278,9 @@ body {
   padding: 20px;
   background-color: #237217;
 }
+
 /* about */
+
 .circular-progress svg {
   position: absolute;
   top: 48%;
@@ -299,7 +303,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
-  
 }
 
 .circular-progress .outer {
@@ -326,7 +329,6 @@ body {
   align-items: center;
   box-shadow: inset 2px 2px 6px -1px rgba(14, 179, 14, 0.2),
     inset -2px -2px 6px -1px rgba(81, 180, 9, 0.7);
- 
 }
 
 .circular-progress #number {
@@ -347,9 +349,9 @@ circle {
   stroke-width: 10px;
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
-  transition: stroke-dashoffset 1s ease-out  ; /* Smooth transition */
+  transition: stroke-dashoffset 1s ease-out; /* Smooth transition */
 }
-.about{
+.about {
   animation: flyUp 1s ease forwards;
   animation-delay: 0s;
   display: block;
@@ -360,7 +362,6 @@ circle {
 .img-container img {
   width: 40%;
   margin-left: 200px;
-  /* padding: 20px; */
 }
 
 /* contact us */
@@ -371,20 +372,6 @@ circle {
 .contact a {
   margin: 0 20px;
 }
-/* common classes */
-.greenrec {
-  border: #237217 solid 6px;
-  border-radius: 20px;
-  width: fit-content;
-  font-size: 60px;
-  text-align: center;
-  color: #237217;
-  padding: 20px;
-  margin-bottom: 30px;
-  font-weight: bolder;
-}
-
-/* contact */
 
 form input,
 textarea {
@@ -413,14 +400,7 @@ textarea {
   background-color: #00ff00;
 }
 
-.txt {
-  font-family: Inknut Antiqua;
-  font-size: larger;
-}
-.bgblack {
-  background-color: black;
-  width: 100%;
-}
+/* projects */
 
 .cardStyle {
   width: 100%;
@@ -445,7 +425,6 @@ textarea {
   opacity: 0;
 }
 .projectDetail span {
-  /* color: #237217; */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -476,4 +455,22 @@ textarea {
 .cardStyle:hover .projectDetail {
   opacity: 1;
   transform: scale(1.1);
+}
+.viewBtn {
+  width: fit-content;
+  position: absolute;
+  right: 10px;
+  top: 100%;
+}
+@media screen {
+  ::-webkit-scrollbar {
+    width: 8px;
+     
+  }
+}
+
+@media screen {
+  ::-webkit-scrollbar-thumb {
+    background-color: #237217;
+  }
 }

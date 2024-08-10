@@ -15,7 +15,6 @@ function MySkills() {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      offset: 0,
       once: false,
     });
   }, []);
@@ -32,25 +31,25 @@ function MySkills() {
         </div>
       </div>
       <div className="bg-green" style={{margin:'40px 70px 0'}}>
-          <div className="text-white skill " data-aos="zoom-out-down">
+          <div className="text-white skill " data-aos="fade-up-right">
             <span>
               <img src={Reactlogo} alt="ReactLogo" className="logo" />
             </span>
             <span>React</span>
           </div>
-          <div  className="  text-white  skill " data-aos="zoom-out-down">
+          <div  className="  text-white  skill " data-aos="fade-up-right">
             <span>
               <img src={js} alt="ReactLogo" className="logo" />
             </span>
             <span>JavaSript</span>
           </div>
-          <div  className="  text-white   skill" data-aos="zoom-out-down">
+          <div  className="  text-white   skill" data-aos="fade-up-right">
             <span>
               <img src={angular} alt="ReactLogo" className="logo" />
             </span>
             <span>Angular</span>
           </div>
-          <div  className="  text-white  skill" data-aos="zoom-out-down">
+          <div  className="  text-white  skill" data-aos="fade-up-right">
             <span>
               <img src={nodejs} alt="ReactLogo" className="logo" />
             </span>
@@ -58,25 +57,25 @@ function MySkills() {
           </div>
          
         
-          <div   className="  text-white   skill" data-aos="zoom-out-down">
+          <div   className="  text-white   skill" data-aos="fade-up-right">
             <span>
               <img src={figma} alt="ReactLogo" className="logo" />
             </span>
             <span>figma</span>
           </div>
-          <div  className="  text-white   skill" data-aos="zoom-out-down">
+          <div  className="  text-white   skill" data-aos="fade-up-right">
             <span>
               <img src={mongodb} alt="ReactLogo" className="logo" />
             </span>
             <span>Mongodb</span>
           </div>
-          <div  className="  text-white   skill" data-aos="zoom-out-down">
+          <div  className="  text-white   skill" data-aos="fade-up-right">
             <span>
               <img src={MySQl} alt="ReactLogo" className="logo" />
             </span>
             <span>MySQL</span>
           </div>
-          <div className="  text-white  skill" data-aos="zoom-out-down">
+          <div className="  text-white  skill" data-aos="fade-up-right">
             <span>
               <img src={python} alt="ReactLogo" className="logo" />
             </span>

@@ -213,24 +213,24 @@ body {
 }
 @keyframes grow-shake-shrink {
   0% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   30% {
     transform: scale(1);
   }
   40%,
   60% {
-    transform: scale(1) rotate(5deg);
+    transform: scale(1) rotate(3deg);
   }
   50%,
   70% {
-    transform: scale(1) rotate(-5deg);
+    transform: scale(1) rotate(-3deg);
   }
   80% {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
 .logo {
@@ -250,6 +250,7 @@ body {
   border-radius: 10px;
   width: 10rem;
   opacity: 0.9;
+  
 }
 
 @keyframes fly-in {

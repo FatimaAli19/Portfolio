@@ -15,7 +15,7 @@ function MySkills() {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      offset: 20,
+      offset: 0,
       once: false,
     });
   }, []);

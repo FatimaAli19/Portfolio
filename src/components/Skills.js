@@ -1,4 +1,5 @@
 import React from "react";
+import AOS from "aos";
 import Reactlogo from "../assets/Images/ToolsLogo/react.png";
 import js from "../assets/Images/ToolsLogo/image 4.png";
 import MySQl from "../assets/Images/ToolsLogo/mysql.png";
@@ -8,14 +9,20 @@ import angular from "../assets/Images/ToolsLogo/angular.png";
 import nodejs from "../assets/Images/ToolsLogo/node.png";
 import mongodb from "../assets/Images/ToolsLogo/mongodb.png";
 import "../assets/styles.css";
-
+AOS.init({
+  duration: 1500,     
+  offset: 50,         
+  once: false,       
+});
 function MySkills() {
   return (
     <div className="bgblack" style={{padding:'100px 50px 100px 50px'}}>
-      <div className="row d-flex justify-content-center "  >
+      <div className="row d-flex justify-content-center align-items-center" style={{ padding: "100px 50px 40px 0" }}>
         <div className="col-lg-6 col-sm-12 col-md-12">
-          <div className="text-center text-white heading">
-            <span style={{ fontSize: "70px", marginRight: "19px" }}>My</span>
+          <div className="text-center heading text-white">
+            <span style={{ fontSize: "70px", marginRight: "19px" }}>
+              My{" "}
+            </span>
             <span className="textgreen">Skills</span>
           </div>
         </div>

@@ -60,7 +60,7 @@ function MyContact() {
               </div>
             </div>
             <div
-              className="d-flex" data-aos="fade-right"
+              className="d-flex" data-aos="fade-right" 
               style={{ margin: "4px 20px", padding: "10px" }}
             >
               <a

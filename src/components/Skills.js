@@ -10,7 +10,7 @@ import nodejs from "../assets/Images/ToolsLogo/node.png";
 import mongodb from "../assets/Images/ToolsLogo/mongodb.png";
 import { useEffect } from "react";
 import "../assets/styles.css";
- 
+
 function MySkills() {
   useEffect(() => {
     AOS.init({
@@ -19,69 +19,68 @@ function MySkills() {
     });
   }, []);
   return (
-    <div className="bgblack" style={{padding:'10px 30px 70px 30px'}}>
-      <div className="row d-flex justify-content-center align-items-center" style={{ padding: "100px 50px 40px 0" }}>
+    <div className="bgblack" style={{ padding: "10px 30px 70px 30px" }}>
+      <div
+        className="row d-flex justify-content-center align-items-center"
+        style={{ padding: "100px 50px 40px 0" }}
+      >
         <div className="col-lg-6 col-sm-12 col-md-12">
           <div className="text-center heading text-white">
-            <span style={{ fontSize: "70px", marginRight: "19px" }}>
-              My{" "}
-            </span>
-            <span className="textgreen">Skills</span>
+            <span style={{ fontSize: "70px", marginRight: "19px", fontWeight:"bolder" }}>Skills.</span>
+             
           </div>
         </div>
       </div>
-      <div className="bg-green" style={{margin:'40px 70px 0'}}>
-          <div className="text-white skill " data-aos="zoom-out-down">
-            <span>
-              <img src={Reactlogo} alt="ReactLogo" className="logo" />
-            </span>
-            <span>React</span>
-          </div>
-          <div  className="  text-white  skill " data-aos="zoom-out-down">
-            <span>
-              <img src={js} alt="ReactLogo" className="logo" />
-            </span>
-            <span>JavaSript</span>
-          </div>
-          <div  className="  text-white   skill" data-aos="zoom-out-down">
-            <span>
-              <img src={angular} alt="ReactLogo" className="logo" />
-            </span>
-            <span>Angular</span>
-          </div>
-          <div  className="  text-white  skill" data-aos="zoom-out-down">
-            <span>
-              <img src={nodejs} alt="ReactLogo" className="logo" />
-            </span>
-            <span>Nodejs</span>
-          </div>
-         
-        
-          <div   className="  text-white   skill" data-aos="zoom-out-down">
-            <span>
-              <img src={figma} alt="ReactLogo" className="logo" />
-            </span>
-            <span>figma</span>
-          </div>
-          <div  className="  text-white   skill" data-aos="zoom-out-down">
-            <span>
-              <img src={mongodb} alt="ReactLogo" className="logo" />
-            </span>
-            <span>Mongodb</span>
-          </div>
-          <div  className="  text-white   skill" data-aos="zoom-out-down">
-            <span>
-              <img src={MySQl} alt="ReactLogo" className="logo" />
-            </span>
-            <span>MySQL</span>
-          </div>
-          <div className="  text-white  skill" data-aos="zoom-out-down">
-            <span>
-              <img src={python} alt="ReactLogo" className="logo" />
-            </span>
-            <span>Python</span>
-          </div>
-         
+      <div className="bg-green" style={{ margin: "40px 70px 0" }}>
+        <div className="text-white skill " data-aos="zoom-in-up">
+          <span>
+            <img src={Reactlogo} alt="ReactLogo" className="logo" />
+          </span>
+          <span>React</span>
+        </div>
+        <div className="  text-white  skill " data-aos="zoom-in-up">
+          <span>
+            <img src={js} alt="ReactLogo" className="logo" />
+          </span>
+          <span>JavaSript</span>
+        </div>
+        <div className="  text-white   skill" data-aos="zoom-in-up">
+          <span>
+            <img src={angular} alt="ReactLogo" className="logo" />
+          </span>
+          <span>Angular</span>
+        </div>
+        <div className="  text-white  skill" data-aos="zoom-in-up">
+          <span>
+            <img src={nodejs} alt="ReactLogo" className="logo" />
+          </span>
+          <span>Nodejs</span>
+        </div>
+
+        <div className="  text-white   skill" data-aos="zoom-in-up">
+          <span>
+            <img src={figma} alt="ReactLogo" className="logo" />
+          </span>
+          <span>figma</span>
+        </div>
+        <div className="  text-white   skill" data-aos="zoom-in-up">
+          <span>
+            <img src={mongodb} alt="ReactLogo" className="logo" />
+          </span>
+          <span>Mongodb</span>
+        </div>
+        <div className="  text-white   skill" data-aos="zoom-in-up">
+          <span>
+            <img src={MySQl} alt="ReactLogo" className="logo" />
+          </span>
+          <span>MySQL</span>
+        </div>
+        <div className="  text-white  skill" data-aos="zoom-in-up">
+          <span>
+            <img src={python} alt="ReactLogo" className="logo" />
+          </span>
+          <span>Python</span>
+        </div>
       </div>
     </div>
   );

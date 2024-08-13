@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../assets/styles.css";
 
 export default function MyProjects() {
-  useEffect(() => {
-    AOS.init({ duration: 1500 });
-  }, []);
-
   const [visibleProjects, setVisibleProjects] = useState(3);
-  
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+    AOS.refresh();
+  }, [visibleProjects]);
+
   const projects = [
-    {
-      name: "React Weather App",
-      image: require("../assets/Images/weather.png"),
-      link: "https://github.com/FatimaAli19/weatherApp_project1",
-      description:
-        "Stay ahead of the forecast with my interactive React Weather App! This responsive web application provides current and forecasted weather conditions, allowing users to plan their days with confidence. Built with React, this app showcases my ability to work with APIs, manage state, and create a seamless user experience",
-    },
     {
       name: "Movie App (Desicinemas) Clone",
       image: require("../assets/Images/desicinema.png"),
@@ -26,18 +19,25 @@ export default function MyProjects() {
         "Get ready to roll out the red carpet with my Movie Website Clone! This React-built project replicates the look and feel of a popular movie ticketing platform, demonstrating my skills in UI/UX design, data management, and responsive development. Users can browse movies, check showtimes, and even purchase tickets - all within a seamless and intuitive interface.",
     },
     {
-      name: "Portfolio Website",
-      image: require("../assets/Images/portfolio.png"),
-      link: "",
-      description:
-        "Welcome to my digital abode! This portfolio website, built with React, showcases my technical expertise and creative flair. With a focus on user experience and accessibility, I have crafted a platform that highlights my projects, skills, and passions. Take a tour to learn more about my approach to web development and how I can help bring your vision to life!",
-    },
-    {
       name: "TextUtils Website",
       image: require("../assets/Images/textUtils.png"),
       link: "",
       description:
         "The ultimate writing companion, Need a quick summary of your text? Our tool generates a summary, providing an overview of the content. Whether you need your text to be in all caps or lowercase, we've got you covered.",
+    },
+    {
+      name: "React Weather App",
+      image: require("../assets/Images/weather.png"),
+      link: "https://github.com/FatimaAli19/weatherApp_project1",
+      description:
+        "Stay ahead of the forecast with my interactive React Weather App! This responsive web application provides current and forecasted weather conditions, allowing users to plan their days with confidence. Built with React, this app showcases my ability to work with APIs, manage state, and create a seamless user experience",
+    },
+    {
+      name: "Portfolio Website",
+      image: require("../assets/Images/portfolio.png"),
+      link: "",
+      description:
+        "Welcome to my digital abode! This portfolio website, built with React, showcases my technical expertise and creative flair. With a focus on user experience and accessibility, I have crafted a platform that highlights my projects, skills, and passions. Take a tour to learn more about my approach to web development and how I can help bring your vision to life!",
     },
   ];
 
@@ -47,21 +47,26 @@ export default function MyProjects() {
 
   return (
     <div className="bgblack" style={{ padding: "0px 50px 100px 0" }}>
-       <div className="row d-flex justify-content-center align-items-center" style={{ padding: "100px 50px 40px 0" }}>
+      <div
+        className="row d-flex justify-content-center align-items-center"
+        style={{ padding: "100px 50px 40px 0" }}
+      >
         <div className="col-lg-6 col-sm-12 col-md-12">
           <div className="text-center heading text-white">
-            <span style={{ fontSize: "70px", marginRight: "19px" }}>
-              My{" "}
-            </span>
-            <span className="textgreen">Projects</span>
+            <span style={{ fontSize: "70px", marginRight: "15px",fontWeight:"bolder" }}>Projects.</span>
+            
           </div>
         </div>
+        
       </div>
       <div className="container" style={{ position: "relative" }}>
         <div className="row">
           {projects.slice(0, visibleProjects).map((project, index) => (
             <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
-              <div className="cardStyle" data-aos={index < 3 ? "flip-right" : ""}>
+              <div
+                className="cardStyle"
+                data-aos={index < 3 ? "flip-right" : ""}
+              >
                 <div
                   style={{
                     backgroundImage: `url(${project.image})`,

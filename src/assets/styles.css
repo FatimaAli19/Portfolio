@@ -6,14 +6,13 @@
 }
 html,
 body {
-   
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   scroll-behavior: smooth;
 }
-body{
+body {
   overflow-x: hidden;
 }
 .bgblack {
@@ -34,7 +33,7 @@ body{
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
-.nav-link-custom  {
+.nav-link-custom {
   position: relative;
   display: inline-block;
   padding-bottom: 5px;
@@ -101,7 +100,6 @@ body{
 .heading {
   animation: flyUp 1s ease forwards;
   animation-delay: 0s;
-  
 }
 /*  keyframes for the flying up animation */
 @keyframes flyUp {
@@ -256,9 +254,8 @@ body{
   background-color: #080808;
   border-radius: 10px;
   width: 10rem;
-  
+
   opacity: 0.9;
-  
 }
 
 @keyframes fly-in {
@@ -445,25 +442,36 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative; /* Ensure the arrow is positioned relative to its container */
 }
-.arrow svg {
+
+.arrow a svg {
   opacity: 0;
-  z-index: 1000;
-  margin-top: 80px;
+  z-index: 10; /* Bring the arrow to the front */
   text-decoration: none;
+  position: relative; /* Ensure the SVG stays on top */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
 }
+
 .cardStyle:hover svg {
   opacity: 1;
+  z-index: 20; /* Ensure the arrow is above other elements on hover */
+  position: absolute; /* Position the arrow absolutely within the card */
+  bottom: 20px;
+  left: 50%; /* Adjust this value as needed to control arrow placement */
 }
+
 .cardStyle:hover {
   background-color: #000000;
   opacity: 0.9;
   border: #237217 3px solid;
+  border-radius: 15px ;
+   
 }
 
 .cardStyle:hover .projectDetail {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .viewBtn {
   width: fit-content;
@@ -474,7 +482,6 @@ textarea {
 @media screen {
   ::-webkit-scrollbar {
     width: 8px;
-     
   }
 }
 

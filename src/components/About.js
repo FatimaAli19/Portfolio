@@ -43,7 +43,7 @@ const Myabout = () => {
           }
         });
       },
-      { threshold: 0.5 }
+       
     );
 
     if (progressSectionRef.current) {

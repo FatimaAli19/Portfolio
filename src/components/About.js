@@ -8,6 +8,7 @@ const Myabout = () => {
   const [projectsProgress, setProjectsProgress] = useState(0);
   const [internshipProgress, setInternshipProgress] = useState(0);
   const [adaptabilityProgress, setAdaptabilityProgress] = useState(0);
+  const [isInView, setIsInView] = useState(false);
 
   const progressSectionRef = useRef(null);
 
@@ -19,16 +20,18 @@ const Myabout = () => {
   }, []);
 
   useEffect(() => {
-    const startProgress = () => {
+    const resetProgress = () => {
       setGpaProgress(0);
       setProjectsProgress(0);
       setInternshipProgress(0);
       setAdaptabilityProgress(0);
+    };
 
+    const startProgress = () => {
       const intervalId = setInterval(() => {
         setGpaProgress((prev) => (prev < 91 ? prev + 1 : prev));
-        setProjectsProgress((prev) => (prev < 40 ? prev + 1 : prev));
-        setInternshipProgress((prev) => (prev < 70 ? prev + 1 : prev));
+        setProjectsProgress((prev) => (prev < 60 ? prev + 1 : prev));
+        setInternshipProgress((prev) => (prev < 80 ? prev + 1 : prev));
         setAdaptabilityProgress((prev) => (prev < 85 ? prev + 1 : prev));
       }, 30);
 
@@ -39,7 +42,10 @@ const Myabout = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            startProgress();
+            resetProgress();
+            setIsInView(true);
+          } else {
+            setIsInView(false);
           }
         });
       },
@@ -57,6 +63,19 @@ const Myabout = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isInView) {
+      const intervalId = setInterval(() => {
+        setGpaProgress((prev) => (prev < 91 ? prev + 1 : prev));
+        setProjectsProgress((prev) => (prev < 60 ? prev + 1 : prev));
+        setInternshipProgress((prev) => (prev < 80 ? prev + 1 : prev));
+        setAdaptabilityProgress((prev) => (prev < 85 ? prev + 1 : prev));
+      }, 30);
+
+      return () => clearInterval(intervalId);
+    }
+  }, [isInView]);
+
   const calculateProjectsText = (progress) => {
     if (progress < 14) return "1+";
     if (progress < 30) return "2+";
@@ -73,19 +92,15 @@ const Myabout = () => {
       <div className="row" style={{ padding: "100px 50px 40px 0" }} ref={progressSectionRef}>
         <div className="col-lg-6 col-sm-12 col-md-12">
           <div className="text-center heading" data-aos="fade-right">
-            <span style={{ fontSize: "70px", marginRight: "19px",fontWeight:"bolder" }}>About.{" "}</span>
-             
+            <span style={{ fontSize: "70px", marginRight: "19px", fontWeight: "bolder" }}>About.{" "}</span>
           </div>
           <div style={{ margin: "0px 40px", padding: "10px" }}>
             <span className="about">
-              I am a Computer Science student at Sukkur IBA and a 4-Year Fully
-              Funded Scholarship Recipient. Along with the above-mentioned skill
-              set, I am proficient in C++, Java, and Data Structures. I am
-              passionate about coding and problem-solving. I have completed my
-              internship onsite at Nextash. I have built 3+ frontend projects.
-              I also have strong communication skills. Committed to continuous
-              learning and personal growth. Let's connect and explore the world
-              of technology together!
+              I am a Computer Science student at Sukkur IBA and a 4-Year Fully Funded Scholarship Recipient. 
+              Along with the above-mentioned skill set, I am proficient in C++, Java, and Data Structures. 
+              I am passionate about coding and problem-solving. I have completed my internship onsite at Nextash. 
+              I have built 3+ frontend projects. I also have strong communication skills. Committed to continuous 
+              learning and personal growth. Let's connect and explore the world of technology together!
             </span>
           </div>
         </div>
